@@ -1,3 +1,32 @@
+<div>
+  <mat-progress-spinner value="100"></mat-progress-spinner>
+  <p>Spinner at 100%</p>
+</div>
+
+<div>
+  <mat-spinner *ngIf="showSpinner" color="warn"></mat-spinner>
+  <button color="accent" mat-raised-button (click)="loadData()">Load Data</button>
+</div>
+
+
+<div>
+  <mat-progress-bar mode="buffer" color="accent"></mat-progress-bar>
+  <p>Buffer</p>
+</div>
+<div>
+  <mat-progress-bar mode="determinate" value="40"></mat-progress-bar>
+  <p>Determinate</p>
+</div>
+<div>
+  <mat-progress-bar mode="indeterminate" color="accent"></mat-progress-bar>
+  <p>Indeterminate</p>
+</div>
+<div>
+  <mat-progress-bar mode="query" color="warn"></mat-progress-bar>
+  Query
+</div>
+
+
 <!-- Typography
   <div class="mat-display-4">This is display 4.</div>
 <div class="mat-display-3">This is display 3.</div>
@@ -55,7 +84,8 @@
   </mat-button-toggle-group>
 </div> -->
 
-<div>
+<!-- Icons & Badges
+  <div>
   <mat-icon color="primary">fitbit</mat-icon>
 </div>
 
@@ -90,4 +120,4 @@
 </div>
 <div>
   <span matBadge="5" matBadgeColor="warn" matBadgeOverlap="false">Notifications</span>
-</div>
+</div> -->
