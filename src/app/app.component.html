@@ -1,4 +1,72 @@
-<div>
+
+<mat-menu #appMenu="matMenu"xPosition="after" yPosition="above">
+  <button mat-menu-item [matMenuTriggerFor]="subMenu">Front End</button>
+  <button mat-menu-item>Backend End</button>
+</mat-menu>
+
+<button class="center" mat-flat-button color="primary" [matMenuTriggerFor]="appMenu">Menu</button>
+
+<mat-menu #subMenu="matMenu">
+  <button mat-menu-item>Angular</button>
+  <button mat-menu-item>React</button>
+  <button mat-menu-item>Vue</button>
+</mat-menu>
+
+
+<mat-menu #lazyMenu="matMenu">
+  <ng-template matMenuContent let-name="name" let-hobby="hobby">
+    <button mat-menu-item>Settings</button>
+    <button mat-menu-item>Hobby is: {{hobby}}</button>
+    <button mat-menu-item>Log Out: {{name}}</button>
+  </ng-template>
+</mat-menu>
+
+<button 
+  mat-raised-button 
+  color="accent" 
+  [matMenuTriggerFor]="lazyMenu" 
+  [matMenuTriggerData]="{ name: 'Maria', hobby: 'crochet'}"
+>
+  Maria
+</button>
+
+<button 
+  mat-raised-button 
+  color="accent" 
+  [matMenuTriggerFor]="lazyMenu" 
+  [matMenuTriggerData]="{ name: 'Brock', hobby: 'video games'}"
+>
+  Brock
+</button>
+
+<!-- Toolbar/Navbar
+  <mat-toolbar color="primary" class="navbar">
+  <div>Cotton Knob Farm</div>
+  <div>
+    <span>Home</span>
+    <span>About</span>
+    <span>Services</span>
+    <mat-icon>menu</mat-icon>
+  </div>
+</mat-toolbar> -->
+
+<!-- Sidenav
+  <mat-sidenav-container>
+  <mat-sidenav #sidenav (opened)="log('Opened')" (closed)="log('Closed')" mode="side" [(opened)]="sidenavOpen">Cotton Knob Farm</mat-sidenav>
+  <mat-sidenav-content>
+    <button mat-raised-button color="accent" (click)="sidenavOpen=!sidenavOpen">Toggle Open</button>
+    <button mat-raised-button color="primary" (click)="sidenav.open()">Open</button>
+    <button mat-raised-button color="warn" (click)="sidenav.close()">Close</button>
+    <button mat-raised-button color="primary" (click)="sidenav.toggle()"><mat-icon>menu</mat-icon></button>
+  </mat-sidenav-content>
+</mat-sidenav-container> -->
+
+
+
+
+<!-- Progress Spinner & Progress Bars
+  
+  <div>
   <mat-progress-spinner value="100"></mat-progress-spinner>
   <p>Spinner at 100%</p>
 </div>
@@ -24,7 +92,7 @@
 <div>
   <mat-progress-bar mode="query" color="warn"></mat-progress-bar>
   Query
-</div>
+</div> -->
 
 
 <!-- Typography
