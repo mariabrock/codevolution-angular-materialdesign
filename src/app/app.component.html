@@ -1,4 +1,5 @@
-<!-- <div class="mat-display-4">This is display 4.</div>
+<!-- Typography
+  <div class="mat-display-4">This is display 4.</div>
 <div class="mat-display-3">This is display 3.</div>
 <div class="mat-display-2">This is display 2.</div>
 <div class="mat-display-1">This is display 1.</div>
@@ -19,7 +20,8 @@
   <h4>This is a heading for h4.</h4>
 </div> -->
 
-<div>
+<!-- Button/Button-Toggle
+  <div>
   <button mat-button>Click Me!</button>
   <button mat-raised-button>Click Me!</button>
   <button mat-flat-button>Click Me!</button>
@@ -51,4 +53,41 @@
     <mat-button-toggle value="vue">Vue</mat-button-toggle>
     {{toggleGroup.value}}
   </mat-button-toggle-group>
+</div> -->
+
+<div>
+  <mat-icon color="primary">fitbit</mat-icon>
+</div>
+
+<div>
+  <span [matBadge]="notifications" [matBadgeHidden]="notifications===0">Notifications</span>
+</div>
+
+<div>
+  <span matBadge="5" matBadgePosition="below before">Notifications</span>
+</div>
+
+<div>
+  <span matBadge="5" matBadgePosition="below after">Notifications</span>
+</div>
+
+<div>
+  <span matBadge="5" matBadgePosition="above before">Notifications</span>
+</div>
+
+<div>
+  <span matBadge="5" matBadgeSize="small">Notifications</span>
+</div>
+<div>
+  <span matBadge="5" matBadgeSize="medium">Notifications</span>
+</div>
+<div>
+  <span matBadge="5" matBadgeSize="large">Notifications</span>
+</div>
+
+<div>
+  <span matBadge="5" matBadgeColor="accent">Notifications</span>
+</div>
+<div>
+  <span matBadge="5" matBadgeColor="warn" matBadgeOverlap="false">Notifications</span>
 </div>
