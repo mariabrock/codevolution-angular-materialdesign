@@ -26,3 +26,7 @@ mat-sidenav {
   background-color: azure;
   width: 200px;
 }
+
+.center {
+  margin: 10rem;
+}

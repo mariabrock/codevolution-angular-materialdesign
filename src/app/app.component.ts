@@ -16,4 +16,10 @@ export class AppComponent {
       this.showSpinner = false;
     }, 5000)
   }
+
+  sidenavOpen = false;
+
+    log(state: any) {
+      console.log(state);
+    }
 }
